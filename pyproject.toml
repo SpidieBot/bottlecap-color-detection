@@ -38,3 +38,16 @@ pytest = "^8.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.pyi?$'
+extend-exclude = '''
+# A regex-string pattern
+(
+  ^/runs/.*                  # ← ignore everything in runs/ (weights, exports, logs)
+  | utils/download_gdrive\.py  # ← old script
+  | model_.*\.py             # ← any generated model_*.py
+)
+'''
