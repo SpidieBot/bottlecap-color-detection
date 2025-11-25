@@ -1,8 +1,9 @@
 from typing import Any, Dict
 
-import wandb
 import yaml
 from ultralytics import YOLO
+
+import wandb
 
 # List of valid YOLO training arguments (from Ultralytics docs)
 VALID_TRAIN_ARGS = [
