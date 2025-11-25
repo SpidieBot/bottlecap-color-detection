@@ -1,0 +1,24 @@
+# Ultralytics YOLO data.yaml example for custom detection
+# Based on: https://docs.ultralytics.com/datasets/detect/
+
+# Optional: Root path for all relative references (use absolute if omitted)
+path: D:/john/interview/adamata/bottlecap-color-detection/dataset  # Helps in containerized environments like Docker
+
+# Training set: Directory or file/list of images (labels assumed in parallel folder)
+train: raw/train  # Or absolute: /dataset/images/train
+# Validation set: Similar structure
+val: raw/test
+# Test set: Optional for final evaluation
+test: raw/test  # Omit if using val for testing
+
+# Class metadata
+nc: 3  # Integer count of classes; must match label files
+
+# Names: List (index-implied) or dict (explicit IDs)
+names:
+  0: light_blue   # Class 0
+  1: dark_blue    # Class 1
+  2: others       # Class 2 (catch-all for non-blue caps)
+
+# Optional: Download script for dataset fetching (e.g., for public sets)
+# download: https://example.com/dataset.zip  # Useful for reproducibility

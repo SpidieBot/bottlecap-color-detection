@@ -1,0 +1,105 @@
+_wandb:
+    value:
+        cli_version: 0.23.0
+        e:
+            jrtoo501bc14ubfzcpi00cghr2muypwa:
+                args:
+                    - configs\settings.yaml
+                codePath: bsort\train.py
+                codePathLocal: bsort\train.py
+                cpu_count: 6
+                cpu_count_logical: 12
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "2000397791232"
+                        used: "82694873088"
+                email: john.doney18@gmail.com
+                executable: C:\Users\John\miniconda3\envs\adamata\python.exe
+                gpu: NVIDIA GeForce GTX 1650
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Turing
+                      cudaCores: 896
+                      memoryTotal: "4294967296"
+                      name: NVIDIA GeForce GTX 1650
+                      uuid: GPU-5c2fbfdf-0ce8-59e4-1571-959465e74cca
+                host: DESKTOP-2TULHT3
+                memory:
+                    total: "33685835776"
+                os: Windows-10-10.0.26200-SP0
+                program: D:\john\interview\adamata\bottlecap-color-detection\bsort\train.py
+                python: CPython 3.9.25
+                root: D:\john\interview\adamata\bottlecap-color-detection
+                startedAt: "2025-11-25T04:55:55.845616Z"
+                writerId: jrtoo501bc14ubfzcpi00cghr2muypwa
+        m: []
+        python_version: 3.9.25
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+                - 41
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.9.25
+            "5": 0.23.0
+            "8":
+                - 3
+            "12": 0.23.0
+            "13": windows-amd64
+batch:
+    value: 16
+data:
+    value: configs/data.yaml
+degrees:
+    value: 10
+device:
+    value: 0
+epochs:
+    value: 100
+fliplr:
+    value: 0.5
+flipud:
+    value: 0.5
+hsv_h:
+    value: 0.015
+hsv_s:
+    value: 0.7
+hsv_v:
+    value: 0.4
+imgsz:
+    value: 640
+lr0:
+    value: 0.001
+mixup:
+    value: 0
+model:
+    value: yolo11n.pt
+mosaic:
+    value: 1
+name:
+    value: exp1
+optimizer:
+    value: auto
+patience:
+    value: 50
+perspective:
+    value: 0
+project:
+    value: bottle_caps
+save_period:
+    value: 10
+scale:
+    value: 0.5
+seed:
+    value: 0
+shear:
+    value: 0
+translate:
+    value: 0.1
+workers:
+    value: 4

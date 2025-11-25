@@ -1,0 +1,340 @@
+{
+    "dataset\\raw\\test\\images\\raw-250110_dc_s001_b2_15.jpg": [
+        {
+            "class": "others",
+            "confidence": 0.9982705116271973,
+            "bbox": [
+                420,
+                422,
+                493,
+                490
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.9977442026138306,
+            "bbox": [
+                343,
+                64,
+                411,
+                132
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.9945540428161621,
+            "bbox": [
+                326,
+                784,
+                392,
+                846
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.9551556706428528,
+            "bbox": [
+                573,
+                456,
+                641,
+                522
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.9497454762458801,
+            "bbox": [
+                425,
+                966,
+                490,
+                996
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.9388056993484497,
+            "bbox": [
+                389,
+                177,
+                456,
+                237
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.9276469945907593,
+            "bbox": [
+                479,
+                376,
+                544,
+                436
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.8404062390327454,
+            "bbox": [
+                586,
+                249,
+                659,
+                317
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.826311469078064,
+            "bbox": [
+                472,
+                376,
+                504,
+                448
+            ]
+        }
+    ],
+    "dataset\\raw\\test\\images\\raw-250110_dc_s001_b3_4.jpg": [
+        {
+            "class": "others",
+            "confidence": 0.9980995059013367,
+            "bbox": [
+                305,
+                515,
+                375,
+                584
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.9951335787773132,
+            "bbox": [
+                350,
+                304,
+                420,
+                373
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.9928786158561707,
+            "bbox": [
+                526,
+                860,
+                593,
+                923
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.9908507466316223,
+            "bbox": [
+                483,
+                646,
+                550,
+                711
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.9883614182472229,
+            "bbox": [
+                522,
+                442,
+                593,
+                513
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.9867265224456787,
+            "bbox": [
+                211,
+                723,
+                279,
+                793
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.9773169159889221,
+            "bbox": [
+                261,
+                45,
+                330,
+                115
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.9740595817565918,
+            "bbox": [
+                400,
+                199,
+                467,
+                268
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.9723878502845764,
+            "bbox": [
+                303,
+                204,
+                372,
+                272
+            ]
+        },
+        {
+            "class": "others",
+            "confidence": 0.9615203142166138,
+            "bbox": [
+                593,
+                129,
+                661,
+                199
+            ]
+        }
+    ],
+    "dataset\\raw\\test\\images\\raw-250110_dc_s001_b4_1.jpg": [
+        {
+            "class": "light_blue",
+            "confidence": 0.975075900554657,
+            "bbox": [
+                545,
+                465,
+                617,
+                535
+            ]
+        },
+        {
+            "class": "light_blue",
+            "confidence": 0.957641065120697,
+            "bbox": [
+                365,
+                799,
+                433,
+                868
+            ]
+        },
+        {
+            "class": "light_blue",
+            "confidence": 0.9240614771842957,
+            "bbox": [
+                178,
+                416,
+                249,
+                485
+            ]
+        },
+        {
+            "class": "light_blue",
+            "confidence": 0.9063186645507812,
+            "bbox": [
+                438,
+                631,
+                510,
+                703
+            ]
+        },
+        {
+            "class": "light_blue",
+            "confidence": 0.891495406627655,
+            "bbox": [
+                224,
+                602,
+                294,
+                672
+            ]
+        }
+    ],
+    "dataset\\raw\\test\\images\\raw-250110_dc_s001_b5_2.jpg": [
+        {
+            "class": "dark_blue",
+            "confidence": 0.9859125018119812,
+            "bbox": [
+                287,
+                571,
+                352,
+                637
+            ]
+        },
+        {
+            "class": "dark_blue",
+            "confidence": 0.9684799313545227,
+            "bbox": [
+                374,
+                817,
+                436,
+                882
+            ]
+        },
+        {
+            "class": "dark_blue",
+            "confidence": 0.9660426378250122,
+            "bbox": [
+                175,
+                0,
+                236,
+                19
+            ]
+        },
+        {
+            "class": "dark_blue",
+            "confidence": 0.9535803198814392,
+            "bbox": [
+                376,
+                0,
+                442,
+                38
+            ]
+        },
+        {
+            "class": "dark_blue",
+            "confidence": 0.925922691822052,
+            "bbox": [
+                208,
+                279,
+                277,
+                348
+            ]
+        },
+        {
+            "class": "dark_blue",
+            "confidence": 0.9209443926811218,
+            "bbox": [
+                466,
+                305,
+                533,
+                373
+            ]
+        },
+        {
+            "class": "dark_blue",
+            "confidence": 0.8733925819396973,
+            "bbox": [
+                352,
+                448,
+                408,
+                506
+            ]
+        },
+        {
+            "class": "dark_blue",
+            "confidence": 0.4464671015739441,
+            "bbox": [
+                535,
+                973,
+                605,
+                997
+            ]
+        },
+        {
+            "class": "dark_blue",
+            "confidence": 0.3081434667110443,
+            "bbox": [
+                173,
+                0,
+                241,
+                41
+            ]
+        }
+    ]
+}
