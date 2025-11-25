@@ -33,3 +33,11 @@ device: 0           # '0' for single GPU, or 'cpu'
 workers: 4            # DataLoader workers
 patience: 50          # Early stopping patience
 seed: 0               # For reproducibility
+
+
+# Inference-Specific
+class_names: ['light_blue', 'dark_blue', 'others']  # Explicit for inference
+model_path: runs/detect/train/weights/best.pt  # Or exported .ncnn
+conf: 0.25  # Confidence threshold
+iou: 0.45   # NMS IoU threshold
+output_dir: inference_results  # Where to save annotated images
