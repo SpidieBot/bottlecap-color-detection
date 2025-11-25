@@ -1,31 +1,34 @@
-# Dockerfile — FINAL VERSION (works 100%)
+# Dockerfile — FINAL WORKING VERSION (Dec 2025)
 FROM python:3.11-slim AS base
 WORKDIR /app
 
-# Install Poetry
-RUN pip install poetry && \
+# Install system deps + Poetry
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends git && \
+    rm -rf /var/lib/apt/lists/* && \
+    pip install --no-cache-dir poetry && \
     poetry config virtualenvs.create false
 
-# Copy only dependency files first (for better caching)
+# Copy EVERYTHING needed for installation FIRST
 COPY pyproject.toml poetry.lock ./
-
-# Install dependencies
-RUN poetry install --only main --no-interaction --no-ansi
-
-COPY bsort/ ./bsort/
-COPY configs/ ./configs/
+COPY bsort ./bsort
+COPY configs ./configs
 COPY dataset/ ./dataset/
 
-# Install the project in editable mode
-RUN poetry install --only main
+# Now install (bsort folder exists → no more error)
+RUN poetry install --only main --no-interaction --no-ansi
 
-# Final image
+# Final minimal image
 FROM python:3.11-slim
 WORKDIR /app
+
+# Copy installed packages
 COPY --from=base /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
 COPY --from=base /usr/local/bin /usr/local/bin
-COPY bsort/ ./bsort/
-COPY configs/ ./configs/
+
+# Copy source code
+COPY bsort ./bsort
+COPY configs ./configs
 COPY dataset/ ./dataset/
 
 # Entry point
