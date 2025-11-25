@@ -13,7 +13,6 @@ RUN apt-get update && \
 COPY pyproject.toml poetry.lock ./
 COPY bsort ./bsort
 COPY configs ./configs
-COPY dataset/ ./dataset/
 
 # Now install (bsort folder exists → no more error)
 RUN poetry install --only main --no-interaction --no-ansi
@@ -29,7 +28,6 @@ COPY --from=base /usr/local/bin /usr/local/bin
 # Copy source code
 COPY bsort ./bsort
 COPY configs ./configs
-COPY dataset/ ./dataset/
 
 # Entry point
 ENTRYPOINT ["bsort"]
