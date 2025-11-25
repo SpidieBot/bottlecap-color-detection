@@ -1,0 +1,39 @@
+{
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "CPython 3.9.25",
+  "startedAt": "2025-11-25T07:39:29.530188Z",
+  "args": [
+    "configs\\settings.yaml"
+  ],
+  "program": "D:\\john\\interview\\adamata\\bottlecap-color-detection\\bsort\\train.py",
+  "codePath": "bsort\\train.py",
+  "codePathLocal": "bsort\\train.py",
+  "email": "john.doney18@gmail.com",
+  "root": "D:\\john\\interview\\adamata\\bottlecap-color-detection",
+  "host": "DESKTOP-2TULHT3",
+  "executable": "C:\\Users\\John\\miniconda3\\envs\\adamata\\python.exe",
+  "cpu_count": 6,
+  "cpu_count_logical": 12,
+  "gpu": "NVIDIA GeForce GTX 1650",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "2000397791232",
+      "used": "83020382208"
+    }
+  },
+  "memory": {
+    "total": "33685835776"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce GTX 1650",
+      "memoryTotal": "4294967296",
+      "cudaCores": 896,
+      "architecture": "Turing",
+      "uuid": "GPU-5c2fbfdf-0ce8-59e4-1571-959465e74cca"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "writerId": "g39ehwspd4q57dd71s5jnhnljf94bxbg"
+}
