@@ -1,24 +1,9 @@
-[project]
-name = "bsort"
-version = "1.0.0"
-description = "Bottle Cap Color Sorter"
-dependencies = [
-    "ultralytics>=8.2.0",
-    "typer[all]>=0.12",
-    "pyyaml>=6.0",
-    "opencv-python>=4.9",
-    "wandb>=0.17",
-    "torch>=2.0"
-]
-
-[project.scripts]
-bsort = "bsort.__main__:app"
-
 [tool.poetry]
 name = "bsort"
 version = "1.0.0"
-description = "Real-time bottle cap color detection for edge deployment"
-authors = ["John <john.doney18@gmail.com>"]
+description = "Bottle Cap Color Detection - Edge Deployment Ready"
+authors = ["John <you@example.com>"]
+packages = [{include = "bsort"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -35,19 +20,34 @@ isort = "^5.13"
 pylint = "^3.0"
 pytest = "^8.0"
 
+[tool.poetry.scripts]
+bsort = "bsort.__main__:app"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
+# === LINTER CONFIGS BELOW (this fixes ALL errors) ===
 [tool.black]
 line-length = 88
 target-version = ['py311']
-include = '\.pyi?$'
 extend-exclude = '''
-# A regex-string pattern
 (
-  ^/runs/.*                  # ← ignore everything in runs/ (weights, exports, logs)
-  | utils/download_gdrive\.py  # ← old script
-  | model_.*\.py             # ← any generated model_*.py
+  ^/runs/.*
+  | utils/download_gdrive\\.py
+  | model_.*\\.py
 )
 '''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+skip_glob = [
+  "runs/**/*",
+  "utils/download_gdrive.py",
+  "model_*.py"
+]
+
+[tool.pylint.'MASTER']
+ignore = "runs,utils/download_gdrive.py,model_*.py"
+extension-pkg-whitelist = "cv2"
