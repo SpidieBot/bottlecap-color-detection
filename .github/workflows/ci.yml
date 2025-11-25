@@ -23,9 +23,9 @@ jobs:
         run: poetry run pylint bsort
 
   build-docker:
-    needs: test-lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Build Docker
-        run: docker build -t bsort:latest .
+      needs: test-lint
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - run: df -h  # Log disk space for debugging
+        - run: docker build -t bsort:latest . --no-cache  # No-cache to avoid large layers
