@@ -1,43 +1,36 @@
-# Model and Dataset
-model: yolo11n.pt  # Lightweight pretrained model for edge efficiency
-data: configs/data.yaml  # YOLO dataset config (from prep)
+# Model & Training
+model: yolo11n.pt
+data: configs/data.yaml
+epochs: 100
+batch: 16
+imgsz: 320
+lr0: 0.001
+optimizer: AdamW
 
-# Training Hyperparameters
-epochs: 500  # Total training epochs; start low (e.g., 50) for small data
-batch: 8    # Batch size; reduce to 8 if memory-constrained
-imgsz: 320   # Image size
-lr0: 0.001   # Initial learning rate; use scheduler for decay
-optimizer: auto  # Or 'AdamW'
+# Augmentation (critical for small data)
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+degrees: 10.0
+translate: 0.1
+scale: 0.5
+shear: 2.0
+perspective: 0.0
+flipud: 0.0
+fliplr: 0.5
+mosaic: 1.0
+mixup: 0.1
 
-# Augmentations (for robustness in color/lighting variations)
-hsv_h: 0.015  # Hue augmentation
-hsv_s: 0.7    # Saturation
-hsv_v: 0.4    # Value
-degrees: 10.0 # Rotation
-translate: 0.1 # Translation
-scale: 0.5     # Scaling
-shear: 0.0     # Shear
-perspective: 0.0 # Perspective distortion
-flipud: 0.5    # Vertical flip
-fliplr: 0.5    # Horizontal flip
-mosaic: 1.0    # Mosaic augmentation (combines images)
-mixup: 0.5     # Mixup (blend images)
+# Inference
+model_path: runs/detect/train2/weights/best.pt
+conf: 0.25
+iou: 0.45
+output_dir: inference_results
+class_names:
+  - light_blue
+  - dark_blue
+  - others
 
-# WandB and Logging
-project: bottle_caps  # WandB project name
-name: exp2            # Run name for versioning
-save_period: 50       # Save checkpoints every 10 epochs
-
-# Hardware and Misc
-device: 0           # '0' for single GPU, or 'cpu'
-workers: 4            # DataLoader workers
-patience: 50          # Early stopping patience
-seed: 0               # For reproducibility
-
-
-# Inference-Specific
-class_names: ['light_blue', 'dark_blue', 'others']  # Explicit for inference
-model_path: runs/detect/train2/weights/best.pt  # Or exported .ncnn
-conf: 0.3  # Confidence threshold
-iou: 0.45   # NMS IoU threshold
-output_dir: inference_results  # Where to save annotated images
+# Project
+project: bottle_caps
+name: train2_final
