@@ -22,12 +22,12 @@ def infer(
     json: bool = False,
 ):
     """Run inference on image or directory."""
-    from bsort.infer import run_inference_batch
+    from bsort.infer import run_inference
 
     if image:
-        run_inference_batch(config, image.parent, json)
+        run_inference(config, image.parent, json)
     elif dir:
-        run_inference_batch(config, dir, json)
+        run_inference(config, dir, json)
     else:
         typer.echo("Error: Provide --image or --dir")
         raise typer.Exit(1)

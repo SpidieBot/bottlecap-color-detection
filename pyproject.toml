@@ -53,6 +53,10 @@ disable = [
   "too-many-statements",
   "unspecified-encoding",
   "f-string-without-interpolation",
-  "wrong-import-order"
+  "wrong-import-order",
+  "line-too-long",
+  "redefined-outer-name"
 ]
-extension-pkg-whitelist = "cv2"
+
+# OR use the newer name (both work, but this is future-proof)
+generated-members = "cv2.*"
