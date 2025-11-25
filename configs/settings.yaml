@@ -1,5 +1,5 @@
 # Model and Dataset
-model: D:\john\interview\adamata\bottlecap-color-detection\yolov10n.pt  # Lightweight pretrained model for edge efficiency
+model: yolo11n.pt  # Lightweight pretrained model for edge efficiency
 data: configs/data.yaml  # YOLO dataset config (from prep)
 
 # Training Hyperparameters
