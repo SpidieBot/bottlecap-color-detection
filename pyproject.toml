@@ -1,8 +1,24 @@
+[project]
+name = "bsort"
+version = "1.0.0"
+description = "Bottle Cap Color Sorter"
+dependencies = [
+    "ultralytics>=8.2.0",
+    "typer[all]>=0.12",
+    "pyyaml>=6.0",
+    "opencv-python>=4.9",
+    "wandb>=0.17",
+    "torch>=2.0"
+]
+
+[project.scripts]
+bsort = "bsort.__main__:app"
+
 [tool.poetry]
 name = "bsort"
 version = "1.0.0"
 description = "Real-time bottle cap color detection for edge deployment"
-authors = ["John <your.email@example.com>"]
+authors = ["John <john.doney18@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
