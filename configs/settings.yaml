@@ -1,0 +1,35 @@
+# Model and Dataset
+model: yolo11n.pt  # Lightweight pretrained model for edge efficiency
+data: configs/data.yaml  # YOLO dataset config (from prep)
+
+# Training Hyperparameters
+epochs: 100  # Total training epochs; start low (e.g., 50) for small data
+batch: 16    # Batch size; reduce to 8 if memory-constrained
+imgsz: 640   # Image size; 320 for faster edge inference testing
+lr0: 0.001   # Initial learning rate; use scheduler for decay
+optimizer: auto  # Or 'AdamW'
+
+# Augmentations (for robustness in color/lighting variations)
+hsv_h: 0.015  # Hue augmentation
+hsv_s: 0.7    # Saturation
+hsv_v: 0.4    # Value
+degrees: 10.0 # Rotation
+translate: 0.1 # Translation
+scale: 0.5     # Scaling
+shear: 0.0     # Shear
+perspective: 0.0 # Perspective distortion
+flipud: 0.5    # Vertical flip
+fliplr: 0.5    # Horizontal flip
+mosaic: 1.0    # Mosaic augmentation (combines images)
+mixup: 0.0     # Mixup (blend images)
+
+# WandB and Logging
+project: bottle_caps  # WandB project name
+name: exp1            # Run name for versioning
+save_period: 10       # Save checkpoints every 10 epochs
+
+# Hardware and Misc
+device: 0           # '0' for single GPU, or 'cpu'
+workers: 4            # DataLoader workers
+patience: 50          # Early stopping patience
+seed: 0               # For reproducibility
